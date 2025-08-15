@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahavatar Narsimha (2025) Hindi PreDVD Download | 𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴</title>
+    <meta name="description"
+        content="Download Mahavatar Narsimha (2025) in Hindi PreDVD quality. Hindi audio with English subtitles.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://ik.imagekit.io/qoobmximx/New%20Project%201%20_B35A9ED_.png?updatedAt=1755188985376"
+        type="png/image/x-icon">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴</a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="all-anime.html"><i class="fas fa-list"></i> All Contents</a></li>
+                    <li><a href="help.html"><i class="fas fa-question-circle"></i> How to Download</a></li>
+                    <li><a href="DMCA.html"><i class="fas fa-gavel"></i> DMCA</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search anime...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Movie Detail Section -->
+    <main class="movie-detail-container">
+        <div class="container">
+            <div class="movie-detail-header">
+                <div class="movie-poster">
+                    <img src="https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fw7q1i1fLejsR86Hsgj8eWTgvLkT.jpg"
+                        alt="Mahavatar Narsimha" loading="lazy">
+                </div>
+                <div class="movie-actions">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                    <!-- Button with video trailer  -->
+                    <button class="btn btn-secondary" id="trailerButton"
+                        data-video-url="https://youtu.be/48_83xrV84o?si=jciUWuCdKtcQbu9B">
+                        <i class="fas fa-play"></i> Trailer
+                    </button>
+
+                    <!-- Modal for video player -->
+                    <div id="videoModal" class="modal"
+                        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center;">
+                        <div style="position:relative; width:80%; max-width:800px;">
+                            <span class="close-modal"
+                                style="position:absolute; top:-40px; right:0; color:white; font-size:30px; cursor:pointer;">&times;</span>
+                            <div id="videoPlayerContainer" style="padding-top:56.25%; position:relative;">
+                                <iframe id="videoPlayer"
+                                    style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const trailerButton = document.getElementById('trailerButton');
+                            const videoModal = document.getElementById('videoModal');
+                            const videoPlayer = document.getElementById('videoPlayer');
+                            const closeModal = document.querySelector('.close-modal');
+
+                            // Function to extract YouTube ID from URL or return the original URL
+                            function getVideoEmbedUrl(url) {
+                                // YouTube handling
+                                if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                                    let videoId = '';
+                                    if (url.includes('v=')) {
+                                        videoId = url.split('v=')[1].split('&')[0];
+                                    } else if (url.includes('youtu.be/')) {
+                                        videoId = url.split('youtu.be/')[1].split('?')[0];
+                                    }
+                                    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+                                }
+                                // Vimeo handling
+                                else if (url.includes('vimeo.com')) {
+                                    const videoId = url.split('vimeo.com/')[1].split('?')[0];
+                                    return `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+                                }
+                                // Direct video file (mp4, webm, etc.)
+                                else if (url.match(/\.(mp4|webm|ogg)$/i)) {
+                                    return url;
+                                }
+                                // If none of the above, return as-is (may work for some providers)
+                                return url;
+                            }
+
+                            trailerButton.addEventListener('click', function () {
+                                const videoUrl = this.getAttribute('data-video-url');
+                                if (videoUrl) {
+                                    const embedUrl = getVideoEmbedUrl(videoUrl);
+                                    videoPlayer.src = embedUrl;
+                                    videoModal.style.display = 'flex';
+                                }
+                            });
+
+                            closeModal.addEventListener('click', function () {
+                                videoPlayer.src = '';
+                                videoModal.style.display = 'none';
+                            });
+
+                            // Close modal when clicking outside the video
+                            videoModal.addEventListener('click', function (e) {
+                                if (e.target === videoModal) {
+                                    videoPlayer.src = '';
+                                    videoModal.style.display = 'none';
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="movie-info">
+                <h1>Mahavatar Narsimha <span>(2025)</span></h1>
+                <h2 class="original-title">महावतार नरसिंह</h2>
+
+                <div class="movie-meta">
+                    <span><i class="fas fa-star"></i> 9.1/10</span>
+                    <span><i class="fas fa-clock"></i> 120 min</span>
+                    <span><i class="fas fa-calendar"></i> 2025</span>
+                    <span><i class="fas fa-globe"></i> India</span>
+                    <span><i class="fas fa-tv"></i> Movie</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3><i class="fas fa-tags"></i> Genres - Mythology, Action, Adventure, Fantasy</h3>
+
+                    <div class="movie-languages">
+                        <span><strong>Available in:</strong></span>
+                        <button class="active">Hindi</button>
+                        <button>English Sub</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-detail-content">
+                <div class="movie-info">
+                    <h2><i class="fas fa-scroll"></i> Synopsis</h2>
+                    <p>Mahavatar Narsimha tells the divine story of Lord Vishnu's fourth avatar, Narsimha - the
+                        half-man, half-lion incarnation who appeared to protect his devotee Prahlad and restore
+                        cosmic balance. The movie depicts the epic battle between Narsimha and the demon king
+                        Hiranyakashipu, who had gained a boon making him nearly invincible.</p>
+                    <p>Set in ancient times, the film explores themes of devotion, dharma, and the triumph of good
+                        over evil. With stunning visual effects and powerful performances, Mahavatar Narsimha brings
+                        this sacred story from Hindu mythology to life for modern audiences.</p>
+                </div>
+
+                <div class="movie-info">
+                    <h2><i class="fas fa-users"></i> Main Characters</h2>
+
+                    <div class="cast-grid">
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpwNC3nNhPh2_zWRe1t6NYMFxWvesIxKnLzbnGPy7MxZcHG0wnS4s2TzPf5UYp3VqOx4w&usqp=CAU"
+                                    alt="Narsimha" loading="lazy">
+                            </div>
+                            <h4>Narsimha</h4>
+                            <p>The Divine Avatar</p>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://images.filmibeat.com/ph-big/2025/07/mahavatar-narsimha1753102502_0.jpg"
+                                    alt="Prahlad" loading="lazy">
+                            </div>
+                            <h4>Prahlad</h4>
+                            <p>The Devotee</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="movie-info">
+                    <h2><i class="fas fa-images"></i> Screenshots</h2>
+                    <div class="screenshot-info">
+                        <div class="screenshot">
+                            <img src="https://imgshare.xyz/img/3/68835bdcabc609b7b6208279/03.jpg" alt="Screenshot 1"
+                                loading="lazy">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://imgshare.xyz/img/2/68835bddabc609b7b620827a/01.jpg" alt="Screenshot 2"
+                                loading="lazy">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://imgshare.xyz/img/1/68835bdcabc609b7b6208278/04.jpg" alt="Screenshot 3"
+                                loading="lazy">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://i.pinimg.com/1200x/f8/8b/01/f88b01c83a091ee18216d02b76df5351.jpg"
+                                alt="Screenshot 4" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="download" class="movie-downloads">
+                    <h2><i class="fas fa-download"></i> Download Links</h2>
+
+                    <div class="download-options">
+                        <h3> Hindi PreDVD Version</h3>
+                        <div class="download-quality">
+                            <h3><i class="fas fa-cloud-download-alt"></i>MULTI-SERVER</h3>
+                            <div class="hero-actions">
+                                <a href="https://teraboxlinks.com/narsimh480" class="btn btn-primary">480p</a>
+
+                                <div class="hero-actions">
+                                    <a href="https://teraboxlinks.com/narsimhaere" class="btn btn-primary">720p</a>
+
+                                    <div class="hero-actions">
+                                        <a href="https://teraboxlinks.com/narsimh10801"
+                                            class="btn btn-primary">1080p</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="movie-recommendations">
+                        <h2><i class="fas fa-thumbs-up"></i> Similar Movies</h2>
+                        <div class="anime-grid">
+                            <!-- Recommended movies cards would go here -->
+                            <!-- Recommended donghua cards would go here -->
+                            <!-- Soul Land 2 (Douluo Dalu 2) -->
+                            <div class="anime-card" data-title="Soul Land 2" data-type="donghua"
+                                data-genres="action adventure fantasy cultivation romance" data-year="2023"
+                                data-status="ongoing" data-rating="8.8" data-network="Tencent Video"
+                                data-episodes="100+" data-studio="Sparkly Key Animation Studio" data-source="novel"
+                                data-author="Tang Jia San Shao">
+                                <a href="anime-soul-land-2.html">
+                                    <img src="https://i.pinimg.com/736x/d0/8d/6e/d08d6e955d08daf2fa944bc4e9aeb0be.jpg"
+                                        alt="Soul Land 2 Poster">
+                                    <div class="anime-card-overlay">
+                                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                                        <h3>Soul Land 2</h3>
+                                        <p>114 Episodes</p>
+                                    </div>
+                                </a>
+                                <!-- Premium Tag -->
+                                <div class="premium-tag">SUB</div>
+                            </div>
+                            <!-- Battle Through the Heavens -->
+                            <div class="anime-card" data-title="Battle Through the Heavens"
+                                data-genres="action fantasy adventure cultivation">
+                                <a href="anime-btth.html">
+                                    <img src="https://i.pinimg.com/736x/fa/b3/cc/fab3ccdec4432a92a6da585f5ddfeb2b.jpg"
+                                        alt="Battle Through the Heavens Poster">
+                                    <div class="anime-card-overlay">
+                                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                                        <h3>Battle Through the Heavens</h3>
+                                        <p>5 Seasons</p>
+                                    </div>
+                                </a>
+                                <!-- Premium Tag -->
+                                <div class="premium-tag">SUB</div>
+                            </div>
+                            <!-- Dragon Prince Yuan -->
+                            <div class="anime-card" data-title="Dragon Prince Yuan" data-type="donghua"
+                                data-genres="action fantasy cultivation romance politics" data-year="2024"
+                                data-status="upcoming" data-rating="N/A" data-network="Bilibili" data-episodes="TBA"
+                                data-studio="Colored-Pencil Animation" data-source="novel"
+                                data-author="Tian Can Tu Dou">
+                                <a href="anime-dragon-prince-yuan.html">
+                                    <img src="https://i.pinimg.com/736x/b1/96/75/b196759acf690dc4be63deaa28ab47b2.jpg"
+                                        alt="Dragon Prince Yuan Poster" loading="lazy">
+                                    <div class="anime-card-overlay">
+                                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                                        <h3>Dragon Prince Yuan</h3>
+                                        <p>26 Episodes</p>
+                                    </div>
+                                </a>
+                                <!-- Premium Tag -->
+                                <div class="premium-tag">SUB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴</div>
+                <p>Your premium destination for watching and downloading subbed anime and movies.</p>
+                <div class="social-links">
+                    <a href="https://t.me/+YUDTOIBEztY5NmY1"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCLPfwMjycrLnObR9rm3GXxQ"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://vivex-css.web.app/"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴. All Rights Reserved.</p>
+                <p>Disclaimer: This site does not store any files on its server. All contents are provided by
+                    non-affiliated third parties.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

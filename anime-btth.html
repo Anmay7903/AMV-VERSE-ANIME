@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Through the Heavens (2017) HD Download | 𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴</title>
+    <meta name="description"
+        content="Download Battle Through the Heavens (Doupo Cangqiong) in 480p, 720p, 1080p quality. Chinese audio with English subtitles. Available in multiple sizes.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://ik.imagekit.io/qoobmximx/New%20Project%201%20_B35A9ED_.png?updatedAt=1755188985376"
+        type="png/image/x-icon">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .screenshot {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            background: #1a1a2e;
+            aspect-ratio: 2/3;
+            /* Portrait aspect ratio similar to cast photos */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴</a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="all-anime.html"><i class="fas fa-list"></i> All Contents</a></li>
+                    <li><a href="help.html"><i class="fas fa-question-circle"></i> How to Download</a></li>
+                    <li><a href="DMCA.html"><i class="fas fa-gavel"></i> DMCA</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="only home,content page">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Movie Detail Section -->
+    <main class="movie-detail-container">
+        <div class="container">
+            <div class="movie-detail-header">
+                <div class="movie-poster">
+                    <img src="https://i.pinimg.com/736x/fa/b3/cc/fab3ccdec4432a92a6da585f5ddfeb2b.jpg"
+                        alt="Battle Through the Heavens" loading="lazy">
+                </div>
+                <div class="movie-actions">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                    <!-- Button with YouTube trailer  -->
+                    <button class="btn btn-secondary" id="trailerButton" data-youtube-id="YOUR_YOUTUBE_VIDEO_ID">
+                        <i class="fab fa-youtube"></i> Trailer
+                    </button>
+
+                    <!-- Modal for YouTube video -->
+                    <div id="youtubeModal" class="modal"
+                        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center;">
+                        <div style="position:relative; width:80%; max-width:800px;">
+                            <span class="close-modal"
+                                style="position:absolute; top:-40px; right:0; color:white; font-size:30px; cursor:pointer;">&times;</span>
+                            <div id="youtubePlayer" style="padding-top:56.25%; position:relative;">
+                                <!-- YouTube iframe will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.getElementById('trailerButton').addEventListener('click', function () {
+                            const youtubeId = this.getAttribute('data-youtube-id');
+                            const modal = document.getElementById('youtubeModal');
+
+                            // Insert YouTube iframe
+                            document.getElementById('youtubePlayer').innerHTML = `
+                        <iframe width="100%" height="100%" 
+                          src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          allowfullscreen
+                          style="position:absolute; top:0; left:0;">
+                        </iframe>
+                      `;
+
+                            // Show modal
+                            modal.style.display = 'flex';
+                        });
+
+                        // Close modal when clicking X
+                        document.querySelector('.close-modal').addEventListener('click', function () {
+                            const modal = document.getElementById('youtubeModal');
+                            modal.style.display = 'none';
+                            // Clear the iframe to stop video playback
+                            document.getElementById('youtubePlayer').innerHTML = '';
+                        });
+
+                        // Close modal when clicking outside the video
+                        document.getElementById('youtubeModal').addEventListener('click', function (e) {
+                            if (e.target === this) {
+                                this.style.display = 'none';
+                                // Clear the iframe to stop video playback
+                                document.getElementById('youtubePlayer').innerHTML = '';
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="movie-info">
+                <h1>Battle Through the Heavens <span>(2017)</span></h1>
+                <h2 class="original-title">斗破苍穹 (Doupo Cangqiong)</h2>
+
+                <div class="movie-meta">
+                    <span><i class="fas fa-star"></i> 8.3/10</span>
+                    <span><i class="fas fa-clock"></i> 20 min/episode</span>
+                    <span><i class="fas fa-calendar"></i> 2017 - Present</span>
+                    <span><i class="fas fa-globe"></i> China</span>
+                    <span><i class="fas fa-tv"></i> 5 Seasons</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3><i class="fas fa-tags"></i> Genres - Action, Adventure, Fantasy, Cultivation</h3>
+
+
+                    <div class="movie-languages">
+                        <span><strong>Available in:</strong></span>
+                        <button class="active">Chinese</button>
+                        <button>Hindi Sub</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-detail-content">
+                <div class="movie-info">
+                    <h2><i class="fas fa-scroll"></i> Synopsis</h2>
+                    <p>In a land where no magic is present, a land where the strong make the rules and the weak have
+                        to
+                        obey, a land filled with alluring treasures and beauty yet also filled with unforeseen
+                        danger.
+                        Three years ago, Xiao Yan, who had shown talents none had seen in decades, suddenly lost
+                        everything. His powers, his reputation, and his promise to his mother. What sorcery has
+                        caused
+                        him to lose all of his powers? And why has his fiancee suddenly shown up?</p>
+                    <p>Battle Through the Heavens follows the journey of Xiao Yan in his quest to recover his lost
+                        cultivation and uncover the truth behind his family's downfall. With the help of the
+                        mysterious
+                        Yao Lao, a powerful spirit residing in a ring, Xiao Yan embarks on a path of cultivation,
+                        alchemy, and battles that will test his limits.</p>
+                </div>
+
+                <div class="movie-info">
+                    <h2><i class="fas fa-users"></i> Main Characters</h2>
+
+                    <div class="cast-grid">
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://i.pinimg.com/736x/27/c7/04/27c704032639a05c443fc24b2c160399.jpg"
+                                    alt="Xiao Yan" loading="lazy">
+                            </div>
+                            <h4>Xiao Yan</h4>
+                            <p>Protagonist</p>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://i.pinimg.com/736x/92/4b/ef/924befeb387cb95499426b5e60d88a4a.jpg"
+                                    alt="Yao Lao" loading="lazy">
+                            </div>
+                            <h4>Yao Lao</h4>
+                            <p>Xiao Yan's Mentor</p>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://i.pinimg.com/736x/eb/b0/71/ebb071015598e9c01816e75885b943ef.jpg"
+                                    alt="Xun Er" loading="lazy">
+                            </div>
+                            <h4>Xun Er</h4>
+                            <p>Xiao Yan's Childhood Friend</p>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://i.pinimg.com/736x/83/19/a6/8319a60766526ea11ae116a7ad081658.jpg"
+                                    alt="Medusa" loading="lazy">
+                            </div>
+                            <h4>Medusa</h4>
+                            <p>Queen of the Snake People</p>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://i.pinimg.com/736x/b0/d9/47/b0d947f87e91ec84d422b79d6e5409c6.jpg"
+                                    alt="Zi Yan" loading="lazy">
+                            </div>
+                            <h4>Zi Yan</h4>
+                            <p>Leader of ancient void dragon tribe</p>
+                        </div>
+
+                        <div class="cast-item">
+                            <div class="cast-photo">
+                                <img src="https://i.pinimg.com/736x/30/5d/eb/305debde1104f640a6d7e57133054919.jpg"
+                                    alt="Little Fairy Doctor" loading="lazy">
+                            </div>
+                            <h4>Xiao Yi Xian</h4>
+                            <p>Skilled Healer with Poison Body</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-info">
+                    <h2><i class="fas fa-images"></i> Screenshots</h2>
+                    <div class="screenshot-info">
+                        <div class="screenshot">
+                            <img src="https://i.pinimg.com/736x/31/a9/23/31a923aceefbd1ea7626dcbe7eea122e.jpg"
+                                alt="Screenshot 1" loading="lazy">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://i.pinimg.com/736x/a0/5e/03/a05e03c76d3d6bd0a8feb5e65f3dbeed.jpg"
+                                alt="Screenshot 2" loading="lazy">
+                        </div>
+                        <div class="screenshot">
+                            <img src="https://i.pinimg.com/736x/26/4f/e6/264fe68869eb99ea0119723ac5829a29.jpg"
+                                alt="Screenshot 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="download" class="movie-downloads">
+                    <h2><i class="fas fa-download"></i> Download Links</h2>
+
+                    <div class="download-options">
+
+                        <h3><i class="fas fa-angle-right"></i>
+                            Special Season [Three Year Agreement]</h3>
+                        <div class="download-quality">
+                            <h3><i class="fas fa-film"></i> Season 1 </h3>
+                            <div class="hero-actions">
+                                <a href="Lord of Mysteries.html" class="btn btn-primary">
+                                    server 1</a>
+
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 2</a>
+                                </div>
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 3</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="download-quality">
+                            <h3><i class="fas fa-film"></i> Season 2 </h3>
+                            <div class="hero-actions">
+                                <a href="https://i.pinimg.com/736x/c4/bc/3b/c4bc3b61128706e38735ad107f545695.jpg"
+                                    class="btn btn-primary"> server 1</a>
+
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 2</a>
+                                </div>
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 3</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="download-quality">
+                            <h3><i class="fas fa-film"></i> Season 3 </h3>
+                            <div class="hero-actions">
+                                <a href="Lord of Mysteries.html" class="btn btn-primary">server 1</a>
+
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 2</a>
+                                </div>
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="download-quality">
+                            <h3><i class="fas fa-film"></i> Season 4 </h3>
+                            <div class="hero-actions">
+                                <a href="https://i.pinimg.com/736x/c4/bc/3b/c4bc3b61128706e38735ad107f545695.jpg"
+                                    class="btn btn-primary">server 1</a>
+
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 2</a>
+                                </div>
+                                <div class="hero-actions">
+                                    <a href="Lord of Mysteries.html" class="btn btn-primary">server 3</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="movie-recommendations">
+                    <h2><i class="fas fa-thumbs-up"></i> Similar Donghua</h2>
+                    <div class="anime-grid">
+                        <!-- Recommended donghua cards would go here -->
+                        <!-- Soul Land 2 (Douluo Dalu 2) -->
+                        <div class="anime-card" data-title="Soul Land 2" data-type="donghua"
+                            data-genres="action adventure fantasy cultivation romance" data-year="2023"
+                            data-status="ongoing" data-rating="8.8" data-network="Tencent Video" data-episodes="100+"
+                            data-studio="Sparkly Key Animation Studio" data-source="novel"
+                            data-author="Tang Jia San Shao">
+                            <a href="anime-soul-land-2.html">
+                                <img src="https://i.pinimg.com/736x/d0/8d/6e/d08d6e955d08daf2fa944bc4e9aeb0be.jpg"
+                                    alt="Soul Land 2 Poster">
+                                <div class="anime-card-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                    <h3>Soul Land 2</h3>
+                                    <p>114 Episodes</p>
+                                </div>
+                            </a>
+                            <!-- Premium Tag -->
+                            <div class="premium-tag">SUB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴</div>
+                <p>Your premium destination for watching and downloading subbed anime.</p>
+                <div class="social-links">
+                    <a href="https://t.me/+YUDTOIBEztY5NmY1"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCLPfwMjycrLnObR9rm3GXxQ"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://vivex-css.web.app/"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 𝙰𝙼𝚅 𝚅𝙴𝚁𝚂𝙴. All Rights Reserved.</p>
+                <p>Disclaimer: This site does not store any files on its server. All contents are provided by
+                    non-affiliated third parties.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
